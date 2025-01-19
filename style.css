@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(IMG_20240722_004602_210.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+nav ul li a {
+    color: #c1c9da60;
+    text-decoration: none;
+    font-size: 23px;
+    position: relative;
+    font-family: 'Calibri', sans-serif;
+    font-weight: bolder;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded edges */
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker transparent background on hover */
+    color: #fff;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #bfbc28;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Logo Blink Animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.menu-item:hover ~ .logo,
+.menu-item:active ~ .logo {
+    animation: blink 0.5s ease 3; /* Blink effect on hover or click */
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 10px;
+    margin-top: 20px;
+    font-size: 70px;
+    color: #a49f9f;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-text h1 span {
+    color: #29bc7ce7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-text p span {
+    color: #d4700bfa;
+    font-style: italic;
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+}
+
+/* About Section */
+#about {
+    padding: 40px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 50%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: teal;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #677ebd;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: rgb(120, 145, 211);
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Services Section */
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: rgba(27, 76, 140, 0.8); /* Transparent effect for services */
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: transform 0.7s, background 0.3s ease;
+}
+
+.services-list div i {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.services-list div h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'calibri';
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #55577e;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.services-list div:hover {
+    background: rgba(103, 126, 189, 0.8); /* Lighter hover effect */
+    transform: translateY(-10px);
+}
+
+/* Buttons */
+.button {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #5c766f;
+    padding: 15px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    transition: background 0.7s;
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker transparent background on hover */
+}
+
+#portfolio {
+    padding: 50px 0;
+
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    /* justify-content: space-between; */
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.work img {
+    width: 100%;
+    border-radius: 100%;
+    display: block;
+    transition: transform 0.7s;
+
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.7s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #677ebd;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: rgb(195, 214, 237);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+
+}
+
+.button {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #5c766f;
+    padding: 15px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.7s;
+}
+
+.button:hover {
+    background: #427b95;
+}
+
+nav .fas{
+    display: none;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(Abt.jpeg);
+    }
+
+    .header-text {
+        font-size: 5px;
+        text-shadow: #100e0e;
+        margin-top: 30%; /* Adjust margin for better visibility */
+    }
+
+    .header-text h1 {
+        font-size: 5px; /* Adjust the font size */
+    }
+    nav .fas{
+        display: block;
+
+    }
+
+
+    /* Move the menu icon to the top right corner */
+   nav .fas.fa-bars {
+        position: absolute ;
+        top: 17px; /* Adjust this value to move it up/down */
+        right: 15px; /* Adjust this value to move it left/right */
+        font-size: 20px; /* Adjust size as needed */
+        color: #fff; /* Ensure it's visible on the dark background */ /* Ensure it stays above other elements */
+    }
+
+
+    .button {
+        width: 100%; /* Make the button full width */
+        padding: 12px 20px; /* Adjust padding for better touch accessibility */
+        font-size: 1rem; /* Reduce font size for mobile */
+        text-align: center;
+        margin-top: 20px; /* Add space on top */
+        border-radius: 20px; /* Adjust border radius */
+        border: 2px solid #b7deea; /* Keep the border visible */
+        background: linear-gradient(90deg, #49b1bf, #99bde0); /* Keep the background gradient */
+        transition: all 0.3s ease;
+    }
+    
+    .button:hover {
+        background: linear-gradient(90deg, #33a3b2, #7faed2); /* Adjust hover effect */
+    }
+    
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        width: 50px; /* Smaller logo for mobile */
+        height: 50px;
+        left: -3px;
+        top: 10px;
+    }
+
+    nav ul {
+        background: #3f3f46;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        box-sizing: border-box;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+        text-align: left;
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Adjust the font size */
+    }
+
+    nav ul .fas {
+        font-size: 25px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 25px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        margin-bottom: 30px; /* Ensure spacing for smaller screens */
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 15px;
+        margin-right: 20px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr; /* Stack services in one column */
+        grid-gap: 20px;
+    }
+
+    .services-list div {
+        padding: 20px;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr; /* Stack work items in one column */
+    }
+
+    .work img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+
+    /* Adjust button sizes */
+    .button {
+        width: 100%; /* Full-width button on mobile */
+        padding: 15px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .header-text {
+        position: absolute;
+        bottom: 20px; /* Position it towards the bottom */
+        left: 20px; /* Position it towards the left */
+        font-size: 1rem; /* Adjust font size for readability */
+        text-shadow: #080808;
+        margin-top: 0; /* Remove top margin */
+        color: #fff; /* Ensure text is visible */
+    }
+
+    /* Adjust p tag size */
+    .header-text p {
+        font-size: 1.2rem; /* Reduce font size */
+        margin: 5px 0;
+        color: #e1740ec7; /* Keep the text color */
+    }
+
+    /* Adjust first h1 tag size */
+    .header-text h1:first-of-type {
+        font-size: 2rem; /* Reduce font size */
+        margin: 5px 0;
+        color: #cfe10e76;
+    }
+
+    /* Adjust second h1 tag size */
+    .header-text h1:last-of-type {
+        font-size: 2rem; /* Reduce font size */
+        margin: 10px 0;
+        color: #cfe10e76;
+    }
+
+    /* Adjust the i tag color and size inside h1 */
+    .header-text i {
+        color: #40a0cdaa;
+        font-size: 1.8rem; /* Adjust the font size */
+    }
+
+    /* Adjust the 'From India' text size */
+    .header-text p:last-of-type {
+        font-size: 1.5rem; /* Reduce font size */
+        margin-bottom: 20px;
+        color: #40a0cdaa;
+    }
+
+    /* Button adjustments */
+    .button {
+        width: 100%; /* Make button full-width */
+        padding: 12px 20px; /* Adjust padding */
+        font-size: 1rem; /* Adjust font size */
+        text-align: center;
+        margin-top: 20px; /* Space the button */
+        border-radius: 20px; /* Adjust border radius */
+        border: 2px solid #b7deea; /* Keep the border visible */
+        background: linear-gradient(90deg, #49b1bf, #99bde0); /* Gradient background */
+        transition: all 0.3s ease;
+    }
+
+    .button:hover {
+        background: linear-gradient(90deg, #33a3b2, #7faed2); /* Hover effect */
+    }
+}
+
+#msg{
+    color: forestgreen;
+    margin-top: -45px;
+    display: block;
+}

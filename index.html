@@ -4,18 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PORTFOLIO</title>
+    <meta name="description" content="Santosh Thakur - Software Engineer Portfolio">
+    <title>Santosh Thakur | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee - Copy.css">
+    <!-- Particle.js for space effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
+    <!-- Particles Background Container -->
+    <div id="particles-js"></div>
+
     <div id="header">
         <div class="container">
             <nav>
-                <img src="mylogo.jpg" class="logo">
+                <img src="logo.jpg" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
@@ -25,37 +34,11 @@
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
-
             </nav>
-            <div class="header-text">
-                <p class="border-text" style="color: #e1740ec7; font-size: 2.3rem; margin: 10px 0;">
-                    <b><i>SOFTWARE ENGINEER</i></b>
-                </p>
-                <h1 class="border-text" style="color: #cfe10e76; font-size: 3.5rem; margin: 0;">
-                    HELLO!
-                </h1>
-                <h1 class="border-text" style="color: #cfe10e76; font-size: 3.5rem; margin: 10px 0;">
-                    I'M <b><i style="color: #40a0cdaa;">SANTOSH</i></b>
-                </h1>
-                <p class="border-text" style="color: #40a0cdaa; font-size: 2rem; margin-bottom: 20px;">
-                <b>From India</b>
-                </p>
-                <a href="#contact" class="button" style="
-                    display: inline-block;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    color: #ffffff;
-                    background: linear-gradient(90deg, #49b1bf, #99bde0);
-                    border-radius: 25px;
-                    border: 2px solid #b7deea;
-                    transition: all 0.3s ease;">
-                    Let's Connect
-                </a>
+            <div class="header-text" data-aos="fade-right" data-aos-duration="1200">
+                <h1>HELLO!<br>I'M <span class="typing-text">SANTOSH</span></h1>
+                <p><span class="highlight-text">SOFTWARE ENGINEER</span></p>
             </div>
-            
         </div>
     </div>
 
@@ -64,12 +47,20 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                    <img src="Abt.jpeg" alt="About me">
+                <div class="about-col-1" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="1.jpg">
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title"> ABOUT ME</h1>
-                    <p>I am an aspiring software developer and tech enthusiast with a strong foundation in Python, MySQL, Java, and embedded systems. My passion lies in designing innovative solutions that are both functional and user-centric, leveraging my skills in application development, database management, and front-end design engineering.</p>
+                <div class="about-col-2" data-aos="fade-left" data-aos-duration="1000">
+                    <h1 class="sub-title">ABOUT ME</h1>
+                    <p>I am an aspiring software developer and tech enthusiast with a strong foundation in Python, MySQL, Java, and Software Development Process. My passion lies in designing innovative solutions that are both functional and user-centric, leveraging my skills in application development, database management, and front-end design engineering.</p>
+
+                    <p>Key Projects:</p>
+                    <ul class="key-projects">
+                        <li>Organizational Management System: Developed a Python-MySQL-based solution for employee data management, task scheduling, and calendar integration.</li>
+                        <li>Library Management System: Designed and implemented a robust application using Python (Tkinter) and MySQL.</li>
+                        <li>Student Productivity Platform: Built tools tailored for CA students with an intuitive front-end interface.</li>
+                        <li>"Enjoy" Consumer App: A Java-based application that aggregates offers and discounts from leading food chains.</li>
+                    </ul>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('SKILLS')">SKILLS</p>
@@ -78,22 +69,22 @@
                     </div>
                     <div class="tab-contents active-tab" id="SKILLS">
                         <ul>
-                            <li><span>SOFTWARE ENGINEER</span><br>Designs, develops, and maintains software systems using engineering principles.</li>
-                            <li><span>FULL STACK DEVELOPER</span><br>Expertise in responsive web development using <strong>HTML, CSS, JavaScript, React, Node.js, Express.js, and API Integration.</strong></li>
-                            <li><span>PYTHON DEVELOPER</span><br>Proficient in data science, machine learning, and database management.</li>
+                            <li><span>SOFTWARE ENGINEERING</span><br>Designing, developing and maintaining software systems using engineering principles</li>
+                            <li><span>FULL STACK DEVELOPMENT</span><br>HTML5, CSS, JavaScript, React, Node.js, Express.js, Database Management, API Integration</li>
+                            <li><span>PYTHON DEVELOPMENT</span><br>Data Science, Machine Learning and Database Management</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="EXPERIENCE">
                         <ul>
                             <li><span>2023</span><br>Developer Program at Microsoft</li>
-                            <li><span>2024</span><br>Robotics Hands-On Training on Campus (Summer Internship)</li>
+                            <li><span>2024</span><br>Robotics - Hands-on Training on Campus - Summer Internship 2024</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="EDUCATION">
                         <ul>
-                            <li><span>2023-2027</span><br>Bachelor's of Technology in Information Technology from USICT, Guru Gobind Singh Indraprastha University, New Delhi</li>
+                            <li><span>2023-2027</span><br>Bachelor's of Technology in Information Technology<br>University School of Information, Communication & Technology<br>Guru Gobind Singh Indraprastha University, New Delhi</li>
                         </ul>
                     </div>
                 </div>
@@ -101,157 +92,267 @@
         </div>
     </div>
 
+
     <!----------------------services-------------------------------->
 
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">MY SERVICES</h1>
+            <h1 class="sub-title" data-aos="fade-up">MY SERVICES</h1>
             <div class="services-list">
-                <div>
+                <div data-aos="zoom-in" data-aos-delay="100">
                     <i class="fa-solid fa-code"></i>
                     <h2>SOFTWARE DEVELOPMENT</h2>
-                    <p>Providing scalable, efficient, and user-friendly software solutions tailored to business needs.</p>
-                    <a href="https://www.linkedin.com/in/santosh-thakur23/details/projects/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAAEiwp9QB099KTcwcUtSHeeZpIFR8SKp8qC8">LEARN MORE</a>
+                    <p>Expert in developing robust, scalable software solutions tailored to client requirements. Specializing in efficient algorithms, system architecture, and clean code practices.</p>
+                    <a href="#">LEARN MORE</a>
                 </div>
 
-                <div>
+                <div data-aos="zoom-in" data-aos-delay="200">
                     <i class="fa-solid fa-crop"></i>
                     <h2>FULL STACK DEVELOPMENT</h2>
-                    <p>Building responsive and interactive web applications with cutting-edge technologies.</p>
-                    <a href="#portfolio">LEARN MORE</a>
+                    <p>End-to-end web application development with modern technologies. Creating responsive interfaces with React and powerful backends with Node.js and Express, connected to robust databases.</p>
+                    <a href="#">LEARN MORE</a>
                 </div>
 
-                <div>
+                <div data-aos="zoom-in" data-aos-delay="300">
                     <i class="fa-brands fa-python"></i>
-                    <h2>PYTHON DEVELOPMENT</h2>
-                    <p>Specializing in data-driven applications and automation using Python.</p>
-                    <a href="#portfolio">LEARN MORE</a>
+                    <h2>PYTHON DEVELOPER</h2>
+                    <p>Specialized in Python development for data analysis, automation, and machine learning applications. Proficient with frameworks like Django, Flask, NumPy, and Pandas.</p>
+                    <a href="#">LEARN MORE</a>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!----------------Portfolio---------------------->
 
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">MY WORK</h1>
+            <h1 class="sub-title" data-aos="fade-up">MY WORK</h1>
             <div class="work-list">
-                <div class="work">
-                    <img src="OIP.jpg" alt="Project 1">
-                    <div class="layer">
-                        <h3>Library Management System</h3>
-                        <p>A Python-MySQL-based solution for managing library operations efficiently.</p>
-                        <a href="https://www.linkedin.com/in/santosh-thakur23/details/projects/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAAEiwp9QB099KTcwcUtSHeeZpIFR8SKp8qC8"><i class="fa-brands fa-python"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/project2.jpg" alt="Project 2">
+                <div class="work" data-aos="flip-left" data-aos-delay="100">
+                    <img src="images/img3.jpg">
                     <div class="layer">
                         <h3>Organizational Management System</h3>
-                        <p>An application for employee scheduling, task assignments, and calendar integration.(This is my idea of project i'm working on and through which i am growing my experience in technologies world by experiencing real-world...So Available Soonnn!!)</p>
-                        <a href="#"><i class="fa-solid fa-laptop-code"></i></a>
+                        <p>Python & MySQL-based solution for employee management and task scheduling</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/project3.jpg" alt="Project 3">
+                <div class="work" data-aos="flip-left" data-aos-delay="200">
+                    <img src="images/img3.jpg">
                     <div class="layer">
-                        <h3>"Enjoy" Consumer App</h3>
-                        <p>A Java app aggregating offers and discounts from leading food chains.(This is my idea of project i'm working on and through which i am growing my experience in technologies world by experiencing real-world...So Available Soonnn...!!)</p>
-                        <a href="#"><i class="fa-brands fa-java"></i></a>
+                        <h3>Library Management System</h3>
+                        <p>Python application using Tkinter and MySQL for complete library operations</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work" data-aos="flip-left" data-aos-delay="300">
+                    <img src="images/img3.jpg">
+                    <div class="layer">
+                        <h3>Student Productivity Platform</h3>
+                        <p>Tools for CA students with progress tracking and study optimization</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="button">SEE MORE</a>
+            <a href="#" class="button" data-aos="fade-up">SEE MORE</a>
         </div>
     </div>
+
 
     <!----------------------------contact------------------------------->
 
     <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">CONTACT</h1>
-                    <p><i class="fas fa-paper-plane"></i> santosh.usict@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> (+91) 8745988247</p>
+                <div class="contact-left" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="sub-title">
+                        CONTACT
+                    </h1>
+                    <p><i class="fas fa-envelope"></i> santosh.usict@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> (+91) 8745988247</p>
 
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/santosh-thakur23"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Santoshh7"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.instagram.com/urs.truly._.santoshh/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
 
-                    <a href="MyResume.pdf" download class="button button2">DOWNLOAD RESUME</a>
-
+                    <a href="images/2024-05/img7.png" download class="button button2">DOWNLOAD RESUME</a>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="NAME" placeholder="TYPE YOUR NAME..." required>
-
-                        <input type="email" name="E-MAIL" placeholder="ENTER YOUR E-MAIL" required>
-
-                        <textarea name="MESSAGE" rows="7" placeholder="TYPE YOUR MESSAGE..."></textarea>
-
-                        <button type="submit" class="button button2">SEND MESSAGE</button>
-
+                <div class="contact-right" data-aos="fade-left" data-aos-duration="1000">
+                    <form name="submit-to-google-sheet" id="contactForm">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                        <button type="submit" class="button button2">SUBMIT</button>
                     </form>
-                    <span id="msg"></span>
+                    <span id="message"></span>
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            <p>Copyright © 2024 Santosh Thakur. Made with <i class="fas fa-heart"></i></p>
+        </div>
     </div>
 
-    <!---------------------------Footer----------------------------->
-
-    <footer>
-        <p>© 2025 SANTOSH. All Rights Reserved.</p>
-    </footer>
-
-    <!-------------------------JavaScript--------------------------->
     <script>
-        function openmenu() {
-            document.getElementById("sidemenu").style.right = "0";
-        }
-
-        function closemenu() {
-            document.getElementById("sidemenu").style.right = "-200px";
-        }
-
-        const tabLinks = document.querySelectorAll(".tab-links");
-        const tabContents = document.querySelectorAll(".tab-contents");
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
         function opentab(tabname) {
-            tabLinks.forEach(link => link.classList.remove("active-link"));
-            tabContents.forEach(content => content.classList.remove("active-tab"));
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
 
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxHTNLil4YlAUuOWeC4JjIJ4Z9npSzAgk9f9EemKaZsVdDfOjUkCc3vdh7Gc-XOOsehwA/exec''
+        var sidemenu = document.getElementById("sidemenu");
 
-        /* const scriptURL = 'https://script.google.com/macros/s/AKfycbzMqB2eesow4erIEIAjSwJwNTjZTNi2GFkL18v79gIWtno_Nz6rJaqMw3fZHROn_TdG/exec'*/
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-    
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message Sent Successfully :)"
-                setTimeout(function(){
-                    msg.innerHTML = ""
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
 
-                    },5000)
-                    form.reset
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Contact Form Script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxHTNLil4YlAUuOWeC4JjIJ4Z9npSzAgk9f9EemKaZsVdDfOjUkCc3vdh7Gc-XOOsehwA/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const message = document.getElementById("message");
+
+            form.addEventListener('submit', e => {
+            e.preventDefault();
+            message.innerHTML = "<i class='fas fa-spinner fa-spin'></i> Sending...";
+            
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                    if (response.ok) {
+                        message.innerHTML = "<i class='fas fa-check-circle'></i> Message sent successfully!";
+                        setTimeout(() => {
+                            message.innerHTML = "";
+                        }, 5000);
+                        form.reset();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                    })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    message.innerHTML = "<i class='fas fa-exclamation-triangle'></i> Something went wrong. Please try again.";
+                    setTimeout(() => {
+                        message.innerHTML = "";
+                    }, 5000);
+                });
+        });
+    </script>
+
+    <!-- Particles.js Configuration for space effect -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 160,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": true
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": false
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 0.3,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "bubble": {
+                            "distance": 250,
+                            "size": 0,
+                            "duration": 2,
+                            "opacity": 0,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 400,
+                            "duration": 0.4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            // Initialize AOS Animation Library
+            AOS.init();
+        });
+    </script>
+
+    <!-- Typing effect script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "SANTOSH";
+            const typingElement = document.querySelector('.typing-text');
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    typingElement.textContent = text.substring(0, i+1);
+                    i++;
+                    setTimeout(typeWriter, 150);
+                }
+            }
+            
+            setTimeout(typeWriter, 1500);
+        });
     </script>
 </body>
 
 </html>
-

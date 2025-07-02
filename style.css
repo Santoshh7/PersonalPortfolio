@@ -154,15 +154,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-nav ul li a.active {
-  color: #ffffff;
-}
-
-nav ul li a.active::after {
-  width: 100%;
-}
-
-
 .header-text {
     margin-top: 10%;
     font-size: 30px;
@@ -1001,37 +992,3 @@ nav .fas {
     text-align: center;
     font-size: 14px;
 }
-
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header-text h1 {
-    font-size: 40px;
-  }
-
-  .highlight-text {
-    font-size: 28px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    display: none;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-}
-

@@ -352,10 +352,19 @@ nav ul li a.active::after {
 }
 
 .tab-contents ul li {
-    list-style: none;
-    margin: 15px 0;
-    color: #c5c5c5;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.4s forwards;
+  animation-delay: calc(var(--i) * 0.1s);
 }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .tab-contents ul li span {
     color: #4e7df0;

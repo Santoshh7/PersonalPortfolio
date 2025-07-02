@@ -154,6 +154,15 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+nav ul li a.active {
+  color: #ffffff;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+
 .header-text {
     margin-top: 10%;
     font-size: 30px;

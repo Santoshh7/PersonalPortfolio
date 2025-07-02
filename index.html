@@ -138,14 +138,34 @@
         <div class="container">
             <h1 class="sub-title" data-aos="fade-up">MY WORK</h1>
             <div class="work-list">
+
+                <div class="work hidden-project" data-aos="flip-left" data-aos-delay="400">
+                    <img src="pizza_king.jpg" alt="Pizza King">
+                    <div class="layer">
+                        <h3>Pizza King – Online Delivery Platform</h3>
+                        <p>Frontend website for pizza ordering with menu, cart, and checkout using HTML, CSS, JS</p>
+                        <a href="https://pizza-king-rose.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
                 <div class="work" data-aos="flip-left" data-aos-delay="100">
                     <img src="OrgMS.jpg">
                     <div class="layer">
-                        <h3>Organizational Management System</h3>
-                        <p>Python & MySQL-based solution for employee management and task scheduling</p>
-                        <a href="https://www.linkedin.com/in/santosh-thakur23/?profileId=ACoAAEiwp9QB099KTcwcUtSHeeZpIFR8SKp8qC8"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>Free Open-Source AI-Powered Graph Generator</h3>
+                        <p>Streamlit-based tool for generating dynamic, LLM-compatible visualizations from CSV, Excel, PDF, or manual data inputs, with support for multi-series charts and exportable outputs</p>
+                        <a href="https://online-graph-generator-gxvumohpwacjzkusxtemd2.streamlit.app/"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
+
+                <div class="work" data-aos="flip-left" data-aos-delay="100">
+                    <img src="OrgMS.jpg">
+                    <div class="layer">
+                        <h3>AI-Powered NLP Resume Screener</h3>
+                        <p>Resume ranking system using Sentence-BERT and cosine similarity to match resumes with job descriptions, built with Hugging Face, Streamlit, and PDF parsing</p>
+                        <a href="https://nlp-resume-analyzer-qjjxatrddetn96uqjne8vj.streamlit.app/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
                 <div class="work" data-aos="flip-left" data-aos-delay="200">
                     <img src="LMRS.jpg">
                     <div class="layer">
@@ -154,7 +174,17 @@
                         <a href="https://www.linkedin.com/posts/santosh-thakur23_librarymanagement-python-tkinter-activity-7240380820589268993-9fhI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEiwp9QB099KTcwcUtSHeeZpIFR8SKp8qC8"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="work" data-aos="flip-left" data-aos-delay="300">
+
+                <div class="work hidden-project" data-aos="flip-left" data-aos-delay="100">
+                    <img src="OrgMS.jpg">
+                    <div class="layer">
+                        <h3>Organizational Management System</h3>
+                        <p>Python & MySQL-based solution for employee management and task scheduling</p>
+                        <a href="https://www.linkedin.com/in/santosh-thakur23/?profileId=ACoAAEiwp9QB099KTcwcUtSHeeZpIFR8SKp8qC8"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <div class="work hidden-project" data-aos="flip-left" data-aos-delay="300">
                     <img src="Stsys.jpg">
                     <div class="layer">
                         <h3>Student Productivity Platform</h3>
@@ -162,8 +192,9 @@
                         <a href="https://www.linkedin.com/in/santosh-thakur23/?profileId=ACoAAEiwp9QB099KTcwcUtSHeeZpIFR8SKp8qC8"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
+                
             </div>
-            <a href="#" class="button" data-aos="fade-up">SEE MORE</a>
+            <a href="javascript:void(0)" class="button" data-aos="fade-up" onclick="showMoreProjects()">EXPLORE:)</a>
         </div>
     </div>
 
@@ -338,7 +369,7 @@
                 "retina_detect": true
             });
 
-            // Initialize AOS Animation Library
+            // isse AOS Animation Library shuru hojyega
             AOS.init();
         });
     </script>
@@ -361,6 +392,17 @@
             setTimeout(typeWriter, 1500);
         });
     </script>
+
+    <script>
+function showMoreProjects() {
+    const hiddenProjects = document.querySelectorAll('.hidden-project');
+    hiddenProjects.forEach(project => {
+        project.style.display = 'block';
+    });
+    // document.querySelector('.button').style.display = 'none';
+}
+</script>
+    
 </body>
 
 </html>

@@ -139,7 +139,7 @@
             <h1 class="sub-title" data-aos="fade-up">MY WORK</h1>
             <div class="work-list">
 
-                <div class="work hidden-project" data-aos="flip-left" data-aos-delay="400">
+                <div class="work" data-aos="flip-left" data-aos-delay="400">
                     <img src="pizzaKing.png" alt="Pizza King">
                     <div class="layer">
                         <h3>Pizza King – Online Delivery Platform</h3>
@@ -393,15 +393,32 @@
         });
     </script>
 
-    <script>
+<!--     <script>
 function showMoreProjects() {
     const hiddenProjects = document.querySelectorAll('.hidden-project');
     hiddenProjects.forEach(project => {
         project.style.display = 'block';
-    });
+    }); -->
     // document.querySelector('.button').style.display = 'none';
+<!-- }
+</script> -->
+
+    <script>
+function toggleProjects() {
+    const hiddenProjects = document.querySelectorAll('.hidden-project');
+    const toggleButton = document.getElementById('toggleButton');
+    
+    // Check if currently visible
+    const isVisible = hiddenProjects[0].style.display === 'block';
+
+    hiddenProjects.forEach(project => {
+        project.style.display = isVisible ? 'none' : 'block';
+    });
+
+    toggleButton.textContent = isVisible ? 'SEE MORE' : 'COLLAPSE';
 }
 </script>
+
     
 </body>
 
